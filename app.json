@@ -15,7 +15,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.matthewiczkowski.threeputtpoker"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +26,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0bbbbd5f-ffbb-455c-95a1-3b205bb64ec4"
+      }
+    },
+    "owner": "matthewiczkowski"
   }
 }
