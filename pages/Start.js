@@ -1,38 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, View, Image, Pressable } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Start from './pages/Start';
-import Demo from './pages/Demo';
 
-function StartScreen() {
+const CardImage = require('../assets/playing-cards.png');
+
+export default function Start() {
   return (
-    <Start />
-  );
-}
-
-function DemoScreen() {
-  return (
-    <Demo />
-  );
-}
-
-const Tab = createBottomTabNavigator();
-
-function MyTabs() {
-  return (
-    <Tab.Navigator>
-      <Tab.Screen name="Start Screen" component={StartScreen} />
-      <Tab.Screen name="Demo" component={DemoScreen} />
-    </Tab.Navigator>
-  );
-}
-
-export default function App() {
-  return (
-      <NavigationContainer>
-        <MyTabs />
-      </NavigationContainer>
+    <SafeAreaView style={styles.container}>
+      
+      <Text style={{fontSize: 30, fontWeight: 'bold', color: '#fff'}}>Three Putt Poker</Text>
+      <View style={styles.imageContainer}>
+        <Image source={CardImage} style={styles.image} resizeMode='contain' />
+      </View>
+      <View  style={[styles.buttonContainer, { borderWidth: 4, borderColor: "#ffd33d", borderRadius: 18 }]}>
+        <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
+         <Text style={styles.buttonLabel}>Start Game</Text>
+        </Pressable>
+      </View>
+      <StatusBar style="auto" />
+    </SafeAreaView>
   );
 }
 
