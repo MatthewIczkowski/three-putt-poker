@@ -6,8 +6,7 @@ const CardImage = require('../assets/playing-cards.png');
 export default function Start() {
   return (
     <SafeAreaView style={styles.container}>
-      
-      <Text style={{fontSize: 30, fontWeight: 'bold', color: '#fff'}}>Three Putt Poker</Text>
+      <Text style={{fontSize: 30, fontWeight: 'bold', color: '#fff'}}>3 Putt Poker</Text>
       <View style={styles.imageContainer}>
         <Image source={CardImage} style={styles.image} resizeMode='contain' />
       </View>
