@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Start from './pages/Start';
 import Demo from './pages/Demo';
+import CardDeck from './pages/CardDeck';
 
 function StartScreen() {
   return (
@@ -22,8 +23,9 @@ const Tab = createBottomTabNavigator();
 function MyTabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Start Screen" component={StartScreen} />
+      <Tab.Screen name="Deck" component={CardDeck} />
       <Tab.Screen name="Demo" component={DemoScreen} />
+      <Tab.Screen name="Start Screen" component={StartScreen} />
     </Tab.Navigator>
   );
 }
